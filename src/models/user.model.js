@@ -20,6 +20,12 @@ const userSchema = new mongoose.Schema({
         trim:true,
         minlength:[8,"password must be more than 8 chars"],
         select :false
+    },
+    systemUser:{
+        type: Boolean,
+        default: false,
+        immutable: true,
+        select: false
     }
 },{
     timestamps: true
